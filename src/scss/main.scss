@@ -1,0 +1,247 @@
+@import 'reset';
+@import 'variables';
+
+// background, text & border base colors
+@each $key, $color in $colors {
+  .bg-#{$key} {
+    background-color: $color;
+  }
+  .text-#{$key} {
+    color: $color;
+  }
+  .border-#{$key} {
+    border-color: $color;
+  }
+}
+
+@each $key, $color in $reds {
+  .bg-red-#{$key} {
+    background-color: $color;
+  }
+  .text-red-#{$key} {
+    color: $color;
+  }
+  .border-red-#{$key} {
+    border-color: $color;
+  }
+}
+
+@each $key, $color in $oranges {
+  .bg-orange-#{$key} {
+    background-color: $color;
+  }
+  .text-orange-#{$key} {
+    color: $color;
+  }
+  .border-orange-#{$key} {
+    border-color: $color;
+  }
+}
+
+@each $key, $color in $yellows {
+  .bg-yellow-#{$key} {
+    background-color: $color;
+  }
+  .text-yellow-#{$key} {
+    color: $color;
+  }
+  .border-yellow-#{$key} {
+    border-color: $color;
+  }
+}
+
+@each $key, $color in $greens {
+  .bg-green-#{$key} {
+    background-color: $color;
+  }
+  .text-green-#{$key} {
+    color: $color;
+  }
+  .border-green-#{$key} {
+    border-color: $color;
+  }
+}
+
+@each $key, $color in $teals {
+  .bg-teal-#{$key} {
+    background-color: $color;
+  }
+  .text-teal-#{$key} {
+    color: $color;
+  }
+  .border-teal-#{$key} {
+    border-color: $color;
+  }
+}
+
+@each $key, $color in $blues {
+  .bg-blue-#{$key} {
+    background-color: $color;
+  }
+  .text-blue-#{$key} {
+    color: $color;
+  }
+  .border-blue-#{$key} {
+    border-color: $color;
+  }
+}
+
+// font definitions
+.text-xs	{
+  font-size: 0.75rem;
+}
+.text-sm	{
+  font-size: 0.875rem;
+}
+.text-base	{
+  font-size: 1rem;
+}
+.text-lg	{
+  font-size: 1.125rem;
+}
+.text-xl	{
+  font-size: 1.25rem;
+}
+
+@for $i from 2 through 6 {
+  .text-#{$i}xl { font-size: (75rem * $i) / 100 }
+}
+
+
+// sizes
+@each $sz in $general-sizes {
+  .w-#{$sz} {
+    width: $base-size * $sz;
+  }
+  .h-#{$sz} {
+    height: $base-size * $sz;
+  }
+  .p-#{$sz} {
+    padding: #{$sz}rem;
+  }
+  .px-#{$sz} {
+    padding: {
+      right: #{$sz}rem;
+      left: #{$sz}rem;
+    }
+  }
+  .py-#{$sz} {
+    padding: {
+      top: #{$sz}rem;
+      bottom: #{$sz}rem;
+    }
+  }
+  .m-#{$sz} {
+    margin: #{$sz}rem;
+  }
+  .mx-#{$sz} {
+    margin: {
+      right: #{$sz}rem;
+      left: #{$sz}rem;
+    }
+  }
+  .my-#{$sz} {
+    margin: {
+      top: #{$sz}rem;
+      bottom: #{$sz}rem;
+    }
+  }
+  @if $sz > 0 {
+    @if $sz < 4 {
+      .max-w-#{$sz}xl {
+        max-width: 36rem + (4 * $sz);
+      }
+    }
+    @else if $sz < 7 {
+      .max-w-#{$sz}xl {
+        max-width: 40rem + (4 * $sz);
+      }
+    }
+  }
+
+  // grid-gaps
+  .col-gap-#{$sz} {
+    column-gap: #{$sz}rem;
+  }
+  .row-gap-#{$sz} {
+    row-gap: #{$sz}rem;
+  }
+}
+
+.min-w-0 {
+  min-width: 0;
+}
+.min-h-0 {
+  min-height: 0;
+}
+.min-w-full {
+  min-width: 100%;
+}
+.min-h-full {
+  min-height: 100%;
+}
+.min-w-screen {
+  min-width: 100vw;
+}
+.min-h-screen {
+  min-height: 100vh;
+}
+
+// flex utilities
+.flex {
+  display: flex;
+
+  &.flex-row {
+    flex-direction: row;
+  }
+
+  &.flex-col {
+    flex-direction: column;
+  }
+
+  &.items-center {
+    align-items: center;
+  }
+  &.items-start {
+    align-items: flex-start;
+  }
+  &.items-end {
+    align-items: flex-end;
+  }
+
+  &.justify-center {
+    justify-content: center;
+  }
+  &.justify-between {
+    justify-content: space-between;
+  }
+  &.justify-around {
+    justify-content: space-around;
+  }
+  &.justify-evenly {
+    justify-content: space-evenly;
+  }
+  &.justify-start {
+    justify-content: flex-start;
+  }
+  &.justify-end {
+    justify-content: flex-end;
+  }
+
+  .flex-grow {
+    flex-grow: 1;
+  }
+  .flex-grow-2 {
+    flex-grow: 2;
+  }
+}
+
+.grid {
+  display: grid;
+
+  @for $grd from 1 through 24 {
+    &.grid-cols-#{$grd} {
+      grid-template-columns: repeat($grd, minmax(0, 1fr));
+    }
+  }
+}

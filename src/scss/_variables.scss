@@ -1,0 +1,27 @@
+/*
+  Colors
+*/
+
+$reds: (100: #F9D2CE, 200: #F3A59D, 300: #ED796D, 400: #E74C3C);
+
+$oranges: (100: #FCE6C4, 200: #F9CD88, 300: #F6B54E, 400: #F39C12);
+
+$yellows: (100: #FBF0C3, 200: #F8E187, 300: #F5D34B, 400: #F1C40F);
+
+$greens: (100: #CBF2DB, 200: #96E5B8, 300: #63D995, 400: #2ECC71);
+
+$teals: (100: #C6EEE6, 200: #8CDDCD, 300: #54CDB5, 400: #1ABC9C);
+
+$blues: (100: #CCE5F6, 200: #99CBED, 300: #67B2E4, 400: #3498DB);
+
+$red: #E74C3C;
+$orange: #F39C12;
+$yellow: #F1C40F;
+$green: #2ECC71;
+$teal: #1ABC9C;
+$blue: #3498DB;
+
+$colors: (red: $red, orange: $orange, yellow: $yellow, green: $green, teal: $teal, blue: $blue);
+
+$base-size: 0.25rem;
+$general-sizes: 0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 56, 64;
